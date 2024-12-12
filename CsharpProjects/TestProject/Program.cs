@@ -89,78 +89,99 @@ class Program{
             // Console.WriteLine(characters.Remove('b'));
             // Console.WriteLine(characters.IndexOf('b'));
 
-//             Exercise 1- When you post a message on Facebook, depending on the number of people who like your post, Facebook displays different information.
+            //             Exercise 1- When you post a message on Facebook, depending on the number of people who like your post, Facebook displays different information.
 
-// If no one likes your post, it doesn't display anything.
-// If only one person likes your post, it displays: [Friend's Name] likes your post.
-// If two people like your post, it displays: [Friend 1] and [Friend 2] like your post.
-// If more than two people like your post, it displays: [Friend 1], [Friend 2] and [Number of Other People] others like your post.
-// Write a program and continuously ask the user to enter different names, until the user presses Enter (without supplying a name). Depending on the number of names provided, display a message based on the above pattern.
-/*
-            List<string> names = new List<string>();
-while(true){
+            // If no one likes your post, it doesn't display anything.
+            // If only one person likes your post, it displays: [Friend's Name] likes your post.
+            // If two people like your post, it displays: [Friend 1] and [Friend 2] like your post.
+            // If more than two people like your post, it displays: [Friend 1], [Friend 2] and [Number of Other People] others like your post.
+            // Write a program and continuously ask the user to enter different names, until the user presses Enter (without supplying a name). Depending on the number of names provided, display a message based on the above pattern.
+            /*
+                        List<string> names = new List<string>();
+            while(true){
 
-            Console.WriteLine("Type your name:");
-           var name= Console.ReadLine();
+                        Console.WriteLine("Type your name:");
+                       var name= Console.ReadLine();
 
-           if(String.IsNullOrEmpty(name)){
-            break;
-           }else{
-            // var names = new List<string>() { };
-            names.Add(name);
-            Console.WriteLine("Count:" + names.Count);
-            foreach(string s in names){
-                Console.WriteLine(s);   
+                       if(String.IsNullOrEmpty(name)){
+                        break;
+                       }else{
+                        // var names = new List<string>() { };
+                        names.Add(name);
+                        Console.WriteLine("Count:" + names.Count);
+                        foreach(string s in names){
+                            Console.WriteLine(s);   
+                        }
+
+                        if(names.Count == 1){
+                            Console.WriteLine("{0} likes your post",names[0]);
+                        }else if(names.Count == 2){
+                            Console.WriteLine("{0} and {1} likes your post",names[0],names[1]);
+                        }else{
+                            Console.WriteLine("{0},{1} and {2} others like your post",names[0],names[1],names.Count-2);
+                        }
+                       }
+                    }
+
+                       */
+
+            /*
+            Exercise 2- Write a program and ask the user to enter their name. Use an array to reverse the name and then store the result in a new string. Display the reversed name on the console.*/
+            /*
+
+                        Console.WriteLine("Enter your name:");
+                        var inputString = Console.ReadLine();
+
+                            char[] charArray = inputString.ToCharArray();
+
+                            Array.Reverse(charArray);
+
+                            Console.WriteLine(string.Join("", charArray));
+            */
+            /*Exercise 3- Write a program and ask the user to enter 5 numbers. If a number has been previously entered, display an error message and ask the user to re-try. Once the user successfully enters 5 unique numbers, sort them and display the result on the console.*/
+            /******************************************************************************
+            Console.WriteLine("Enter 5 numbers!");
+                        int[] input = new int[5];
+                        int inputCount =0;
+            for(int i=0; inputCount <5 ;){
+                Console.WriteLine("@Enter number:");
+                int inputNum =int.Parse(Console.ReadLine());
+
+                            if (Array.IndexOf(input, inputNum) == -1)
+                            {
+                                input[i] = inputNum;
+                                inputCount++;
+                                i++ ;
+                            }else{
+                                Console.WriteLine("Re-try!");
+                            }
             }
-            
-            if(names.Count == 1){
-                Console.WriteLine("{0} likes your post",names[0]);
-            }else if(names.Count == 2){
-                Console.WriteLine("{0} and {1} likes your post",names[0],names[1]);
-            }else{
-                Console.WriteLine("{0},{1} and {2} others like your post",names[0],names[1],names.Count-2);
-            }
-           }
-        }
+            Array.Sort(input);
+            foreach(int i in input){
+                Console.Write(i + " ");
+            }*/
 
-           */
-
-           /*
-           Exercise 2- Write a program and ask the user to enter their name. Use an array to reverse the name and then store the result in a new string. Display the reversed name on the console.*/
-/*
-           
-            Console.WriteLine("Enter your name:");
-            var inputString = Console.ReadLine();
-
-                char[] charArray = inputString.ToCharArray();
-
-                Array.Reverse(charArray);
-
-                Console.WriteLine(string.Join("", charArray));
-*/
-/*Exercise 3- Write a program and ask the user to enter 5 numbers. If a number has been previously entered, display an error message and ask the user to re-try. Once the user successfully enters 5 unique numbers, sort them and display the result on the console.*/
-/******************************************************************************
-Console.WriteLine("Enter 5 numbers!");
-            int[] input = new int[5];
-            int inputCount =0;
-for(int i=0; inputCount <5 ;){
-    Console.WriteLine("@Enter number:");
-    int inputNum =int.Parse(Console.ReadLine());
-
-                if (Array.IndexOf(input, inputNum) == -1)
+            /******************************************************************************
+            Exercise 4- Write a program and ask the user to continuously enter a number or type "Quit" to exit. The list of numbers may include duplicates. Display the unique numbers that the user has entered.*/
+            /*
+            var endOfLoop = false;
+    List<int> numbers = new List<int>();
+while(!endOfLoop){
+    Console.WriteLine("Enter a number:");
+    var input = Console.ReadLine();
+                if (input == "Quit")
                 {
-                    input[i] = inputNum;
-                    inputCount++;
-                    i++ ;
-                }else{
-                    Console.WriteLine("Re-try!");
+                    endOfLoop = true;
+                }
+                else
+                {
+                    numbers.Add(int.Parse(input));
                 }
 }
-Array.Sort(input);
-foreach(int i in input){
-    Console.Write(i + " ");
+List<int> uniqueList = numbers.Distinct().ToList();
+foreach(int number in uniqueList){
+    Console.WriteLine(number+" ");
 }*/
-
         }
     }
 
