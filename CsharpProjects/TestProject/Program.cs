@@ -1,4 +1,6 @@
 ﻿// using CSharpFundamentals.Math;
+using System.Collections;
+
 namespace CSharpFundamentals
 {
 //     public enum ShippingMethod{
@@ -43,19 +45,74 @@ namespace CSharpFundamentals
 //         }
 //     }
 class Program{
-    public static void Main(string[] args)  {
-        // var random = new Random();
-        // const int passowrdLength = 10;
-        //     var buffer = new char[passowrdLength];
+        public static void Main(string[] args)
+        {
+            //Arrays length,IndexOf,Clear,Sort,Reverse
+            // var random = new Random();
+            // const int passowrdLength = 10;
+            //     var buffer = new char[passowrdLength];
 
-        // for(int i = 0; i < passowrdLength;i++){
-        //     buffer[i] = (char)('a'+random.Next(0,26));
-        // }
+            //Random class
 
-        // var password = new string(buffer);
-        // Console.WriteLine(password);
+            // for(int i = 0; i < passowrdLength;i++){
+            //     buffer[i] = (char)('a'+random.Next(0,26));
+            // }
 
+            // var password = new string(buffer);
+            // Console.WriteLine(password);  
+
+            //List
+
+            // var numbers = new List<int>() { 1, 2, 3, 4 };
+            // numbers.Add(50);
+
+            // foreach (int i in numbers)
+            // {
+            //     Console.WriteLine(i);
+            // }
+            // Console.WriteLine(numbers.IndexOf(50));
+
+
+            // var characters = new List<char>() { 'a', 'b' };
+
+            // characters.AddRange(new char[] { 'c', 'd','b' });
+
+            // foreach (var item in characters)
+            // {
+            //     Console.WriteLine(item);
+            // }
+
+            // Console.WriteLine(characters.IndexOf('b'));
+            // Console.WriteLine(characters.Remove('b'));
+            // Console.WriteLine(characters.IndexOf('b'));
+while(true){
+
+            Console.WriteLine("Type your name:");
+           string name= Console.ReadLine();
+
+           if(String.IsNullOrEmpty(name)){
+            break;
+           }else{
+            ArrayList myList = new ArrayList();
+            myList.Add(name);
+            foreach(string s in myList){
+                Console.WriteLine(s);   
+            }
+            
+            if(myList.Count == 1){
+                Console.WriteLine("{0} likes your post",myList[0]);
+            }else if(myList.Count == 2){
+                Console.WriteLine("{0} and {1} likes your post",myList[0],myList[1]);
+            }else{
+                Console.WriteLine("{0},{1} and {2} others like your post",myList[0],myList[1],myList.Count);
+            }
+           }
+        }
+
+           
+
+        }
     }
-}
+
 }
 
