@@ -1,6 +1,8 @@
 ﻿// using CSharpFundamentals.Math;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace CSharpFundamentals
 {
@@ -125,7 +127,7 @@ while(true){
 
            /*
            Exercise 2- Write a program and ask the user to enter their name. Use an array to reverse the name and then store the result in a new string. Display the reversed name on the console.*/
-
+/*
            
             Console.WriteLine("Enter your name:");
             var inputString = Console.ReadLine();
@@ -135,6 +137,29 @@ while(true){
                 Array.Reverse(charArray);
 
                 Console.WriteLine(string.Join("", charArray));
+*/
+/*Exercise 3- Write a program and ask the user to enter 5 numbers. If a number has been previously entered, display an error message and ask the user to re-try. Once the user successfully enters 5 unique numbers, sort them and display the result on the console.*/
+/******************************************************************************
+Console.WriteLine("Enter 5 numbers!");
+            int[] input = new int[5];
+            int inputCount =0;
+for(int i=0; inputCount <5 ;){
+    Console.WriteLine("@Enter number:");
+    int inputNum =int.Parse(Console.ReadLine());
+
+                if (Array.IndexOf(input, inputNum) == -1)
+                {
+                    input[i] = inputNum;
+                    inputCount++;
+                    i++ ;
+                }else{
+                    Console.WriteLine("Re-try!");
+                }
+}
+Array.Sort(input);
+foreach(int i in input){
+    Console.Write(i + " ");
+}*/
 
         }
     }
