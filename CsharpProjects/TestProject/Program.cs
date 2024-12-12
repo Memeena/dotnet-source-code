@@ -94,7 +94,7 @@ class Program{
 // If two people like your post, it displays: [Friend 1] and [Friend 2] like your post.
 // If more than two people like your post, it displays: [Friend 1], [Friend 2] and [Number of Other People] others like your post.
 // Write a program and continuously ask the user to enter different names, until the user presses Enter (without supplying a name). Depending on the number of names provided, display a message based on the above pattern.
-
+/*
             List<string> names = new List<string>();
 while(true){
 
@@ -121,7 +121,20 @@ while(true){
            }
         }
 
+           */
+
+           /*
+           Exercise 2- Write a program and ask the user to enter their name. Use an array to reverse the name and then store the result in a new string. Display the reversed name on the console.*/
+
            
+            Console.WriteLine("Enter your name:");
+            var inputString = Console.ReadLine();
+
+                char[] charArray = inputString.ToCharArray();
+
+                Array.Reverse(charArray);
+
+                Console.WriteLine(string.Join("", charArray));
 
         }
     }
