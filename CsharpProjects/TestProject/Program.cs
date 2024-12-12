@@ -182,6 +182,20 @@ List<int> uniqueList = numbers.Distinct().ToList();
 foreach(int number in uniqueList){
     Console.WriteLine(number+" ");
 }*/
+            // Date and Time
+            // var dateTime = new DateTime(2024, 1, 1);
+            // var yesterday = dateTime.AddDays(-1);
+            // Console.WriteLine("{0} {1}", yesterday, dateTime.Hour);
+// DateTime time = DateTime.Now;
+//             Console.WriteLine("" + time.ToString("yyyy-MM-dd h:mm:ss tt"));
+//             Console.WriteLine("" + time.ToShortTimeString());
+//             Console.WriteLine("" + time.ToLongTimeString());
+//             Console.WriteLine("" + time.ToLongDateString());
+//             Console.WriteLine("" + time.ToShortDateString());
+//Debugging techniques provided by visual studio community version - Breakpoints,Stepping,inspecting variables,memory inspection,Call stack inspection,watch expressions
+//Strings - ToLower,ToUpper,Trim,IndexOf,LastIndexOf,Substring(startIndex),Substring(startIndex,length),Replace,string.IsNullOrEmpty,string.IsNullOrWhiteSpace,str.Split
+//Converting string to number -> int.Parse or Convert.ToInt32(str)
+//Converting number to string -> i.ToString()
         }
     }
 
