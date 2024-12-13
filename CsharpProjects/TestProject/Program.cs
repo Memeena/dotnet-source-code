@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using CSharpFundamentals.Math;
 
 namespace CSharpFundamentals
 {
@@ -21,14 +22,15 @@ namespace CSharpFundamentals
 //             Console.WriteLine("My name is " + firstName + " " + lastName);
 //         }
 //     }
-//        class Program {
-//         static void Main(string[] args){
+       class Program {
+        public static void Main(string[] args){
 //             Person meena = new Person();
-//             Calculator calc = new Calculator();
+            Calculator calculator= new Calculator();    
 //             meena.firstName = "Meena";
 //             meena.lastName = "Krishna"; 
 //             meena.Introduce();
-//             // var result = calc.Add(1, 2);
+            var result = calculator.Add(1, 2);
+            Console.WriteLine(result);
 //             string name = string.Format("{0} {1}", meena.firstName, meena.lastName);
 //             Console.WriteLine("name:" + name);
 //             var numbers = new int[3] {1,2,3};
@@ -45,11 +47,11 @@ namespace CSharpFundamentals
 //             array2[0] = 0;
 //             Console.WriteLine(array2);
 
-//         }
-//     }
-class Program{
-        public static void Main(string[] args)
-        {
+        }
+    }
+// class Program{
+        // public static void Main(string[] args)
+        // {
             //Arrays length,IndexOf,Clear,Sort,Reverse
             // var random = new Random();
             // const int passowrdLength = 10;
@@ -197,7 +199,4 @@ foreach(int number in uniqueList){
 //Converting string to number -> int.Parse or Convert.ToInt32(str)
 //Converting number to string -> i.ToString()
         }
-    }
-
-}
-
+    
