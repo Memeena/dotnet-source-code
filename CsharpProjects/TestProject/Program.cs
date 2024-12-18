@@ -254,6 +254,9 @@ using CartDetails;
 //     }
 // }
 
+/**************************************************************
+Finding Min and Max number in an integer array */
+/*
 namespace ArrayCollection{
     internal class MinandMax{
         static void Main(string[] args){
@@ -303,5 +306,48 @@ namespace ArrayCollection{
 
         }
 
+    }
+}
+*/
+
+/**************************************************************
+Finding Sum and Average of the numbers in an array */
+
+namespace ArrayCollection{
+    internal class FindSumAndAverage{
+        static void Main(string[] args){
+
+        FindSumAndAverage findSumAndAverage = new FindSumAndAverage();
+        findSumAndAverage.Run();
+        }
+
+        public int findSum(int[] array){
+            int sum = 0;
+            foreach(int i in array){
+                sum = sum + i;
+            }
+
+            return sum;
+
+        }
+
+        public void Run(){
+            Console.WriteLine("Enter the size of the array:");
+            int length = int.Parse(Console.ReadLine());
+
+            int[] array = new int[length];
+
+            for(int i = 0; i < length;i++){
+                Console.WriteLine($"Enter the element[{i + 1}]:");
+                array[i] = int.Parse(Console.ReadLine()) ;
+            }
+
+            int sum = findSum(array);
+            double average = sum / length;
+            Console.WriteLine("The sum of the elements of the array is " + sum);
+            Console.WriteLine("Average is " + average);
+
+
+        }
     }
 }
