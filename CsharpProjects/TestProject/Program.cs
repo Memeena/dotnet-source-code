@@ -4,8 +4,8 @@
 // using System.Collections.Generic;
 // using System.Linq;
 // using CSharpFundamentals.Math;
-using LibraryManagement;
-
+// using LibraryManagement;
+using CartDetails;
 // namespace CSharpFundamentals
 // {
 // //     public enum ShippingMethod{
@@ -201,29 +201,55 @@ using LibraryManagement;
 // //Converting number to string -> i.ToString()
 //         }
     
-    namespace Properties{
-        internal class Program{
-            static void Main(string[] args) {
-            // Person person = new Person();
-            // person.Name = "Meenakshi";
-            // person.DisplayInfo();
-            Console.Write("Enter the library name:");
-            string libraryName = Console.ReadLine();
+//     namespace Properties{
+//         internal class Program{
+//             static void Main(string[] args) {
+//             // Person person = new Person();
+//             // person.Name = "Meenakshi";
+//             // person.DisplayInfo();
+//             Console.Write("Enter the library name:");
+//             string libraryName = Console.ReadLine();
 
-            Console.Write("Enter the maximum books the library can hold:");
-            int maxBooks = int.Parse(Console.ReadLine());
+//             Console.Write("Enter the maximum books the library can hold:");
+//             int maxBooks = int.Parse(Console.ReadLine());
 
-            Library myLibrary = new Library(libraryName,maxBooks);
+//             Library myLibrary = new Library(libraryName,maxBooks);
+
+//             do
+//             {
+//         Console.Write("\nEnter the book titles:");
+//                 string input = Console.ReadLine();
+//                 myLibrary.AddBooks(input);
+//                 maxBooks--;
+//             } while (maxBooks >= 0);
+
+// myLibrary.DisplayBooks();
+//             }
+//         }
+//     }
+
+namespace Program{
+    internal class Program(){
+        static void Main(string[] args){
+            Console.WriteLine("Enter the owner's name:");
+            string name=Console.ReadLine();
+
+            Console.WriteLine("Enter the number of maximum number of items the cart can hold:");
+            int maxItems = int.Parse(Console.ReadLine());
+
+            Cart myCart = new Cart(name,maxItems);
 
             do
             {
-        Console.Write("\nEnter the book titles:");
+        Console.Write("\nEnter the name of the item:");
                 string input = Console.ReadLine();
-                myLibrary.AddBooks(input);
-                maxBooks--;
-            } while (maxBooks >= 0);
+                myCart.AddItems(input);
+                maxItems--;
+            } while (maxItems >= 0);
 
-myLibrary.DisplayBooks();
-            }
-        }
+myCart.DisplayItems();
+
+        }   
     }
+}
+
