@@ -313,6 +313,7 @@ namespace ArrayCollection{
 /**************************************************************
 Finding Sum and Average of the numbers in an array */
 
+/*
 namespace ArrayCollection{
     internal class FindSumAndAverage{
         static void Main(string[] args){
@@ -350,4 +351,4 @@ namespace ArrayCollection{
 
         }
     }
-}
+}*/
