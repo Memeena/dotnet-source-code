@@ -5,6 +5,7 @@
 // using System.Linq;
 // using CSharpFundamentals.Math;
 // using LibraryManagement;
+using System.Globalization;
 using CartDetails;
 // namespace CSharpFundamentals
 // {
@@ -228,28 +229,79 @@ using CartDetails;
 //         }
 //     }
 
-namespace Program{
-    internal class Program(){
+// namespace Program{
+//     internal class Program(){
+//         static void Main(string[] args){
+//             Console.WriteLine("Enter the owner's name:");
+//             string name=Console.ReadLine();
+
+//             Console.WriteLine("Enter the number of maximum number of items the cart can hold:");
+//             int maxItems = int.Parse(Console.ReadLine());
+
+//             Cart myCart = new Cart(name,maxItems);
+
+//             do
+//             {
+//         Console.Write("\nEnter the name of the item:");
+//                 string input = Console.ReadLine();
+//                 myCart.AddItems(input);
+//                 maxItems--;
+//             } while (maxItems >= 0);
+
+// myCart.DisplayItems();
+
+//         }   
+//     }
+// }
+
+namespace ArrayCollection{
+    internal class MinandMax{
         static void Main(string[] args){
-            Console.WriteLine("Enter the owner's name:");
-            string name=Console.ReadLine();
+            MinandMax mm = new MinandMax();
+            mm.Run();
 
-            Console.WriteLine("Enter the number of maximum number of items the cart can hold:");
-            int maxItems = int.Parse(Console.ReadLine());
+        }
 
-            Cart myCart = new Cart(name,maxItems);
+        public int FindMin(int[] array){
+            int min=array[0];
 
-            do
-            {
-        Console.Write("\nEnter the name of the item:");
-                string input = Console.ReadLine();
-                myCart.AddItems(input);
-                maxItems--;
-            } while (maxItems >= 0);
+            foreach(int num in array){
+                if(num<min){
+                    min = num;
+                }
+            }
 
-myCart.DisplayItems();
+            return min;
+        }
 
-        }   
+        public int FindMax(int[] array){
+            int max = array[0];
+            foreach( int num in array){
+                if(num > max){
+                    max = num;
+                }
+            }    
+
+            return max;
+        }
+
+        public void Run(){
+            Console.WriteLine("Enter the size of the array:");
+            int n=int.Parse(Console.ReadLine());
+            int[] arr = new int[n];  
+
+            for(int i=0;i<n;i++){
+                Console.WriteLine("Enter the elements of the array:"); 
+                arr[i] = int.Parse(Console.ReadLine()); 
+            }
+
+            int min = FindMin(arr);
+            int max = FindMax(arr);
+            Console.WriteLine("The minimum number in the array is {0}", min);
+            Console.WriteLine("The maximum number in the array is {0}", max);
+
+
+        }
+
     }
 }
-
