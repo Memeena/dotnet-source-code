@@ -5,7 +5,9 @@
 // using System.Linq;
 // using CSharpFundamentals.Math;
 // using LibraryManagement;
+using System.Data;
 using System.Globalization;
+using System.Xml.Serialization;
 using CartDetails;
 // namespace CSharpFundamentals
 // {
@@ -352,3 +354,39 @@ namespace ArrayCollection{
         }
     }
 }*/
+
+/**************************************************************
+ArrayList and Linked List*/
+// namespace ArrayAndList{
+//     internal class ArrayAndLinkedList{
+//         static void Main(string[] args){
+//             List<int> arrayList = new List<int>();
+//             LinkedList<int> linkedList = new LinkedList<int>();
+
+//             for(int i = 0; i < 1000000; i++){
+//                 arrayList.Add(i+1);
+//                 linkedList.AddLast(i+1);
+//             }
+//             long startTime = DateTime.Now.Ticks/TimeSpan.TicksPerMillisecond;
+//             int elementAL = arrayList[700000];
+//             // Console.WriteLine(elementAL);
+//             long endTime = DateTime.Now.Ticks/TimeSpan.TicksPerMillisecond;
+//             long durationAL = endTime - startTime;
+
+//             startTime = DateTime.Now.Ticks/TimeSpan.TicksPerMillisecond;
+//             int elementLL = linkedList.ElementAt(700000);
+//             endTime = DateTime.Now.Ticks/TimeSpan.TicksPerMillisecond;
+//             long durationLL = endTime - startTime;
+
+//             Console.WriteLine("Element retrieved from ArrayList:{0}", elementAL);
+//             Console.WriteLine("Element retrieved from LinkedList:{0}", elementLL);
+//             Console.WriteLine("Time taken by ArrayList:{0}", durationAL);
+//             Console.WriteLine("Time taken by LinkedList:{0}", durationLL);
+
+
+//                     }
+//     }
+// }
+
+/******************************************************************************
+Dictionary*/
