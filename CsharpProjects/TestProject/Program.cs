@@ -390,3 +390,44 @@ ArrayList and Linked List*/
 
 /******************************************************************************
 Dictionary*/
+namespace DictionaryUsage{
+    internal class EmployeeRecordManager{
+
+    static void Main(string[] args){
+        Dictionary<string,string> employeeRecords = new Dictionary<string,string>();
+
+        Console.WriteLine("Enter the employee Records.. Enter 'exit' to stop.");
+
+        while (true){
+            Console.WriteLine("Enter the employee number:");
+            string employeeID = Console.ReadLine(); 
+
+            if(employeeID.ToLower() == "exit"){break;}
+
+            Console.WriteLine("Enter the employee name:");
+            string employeeName = Console.ReadLine();   
+
+            employeeRecords[employeeID] = employeeName;
+
+
+        }
+
+        Console.WriteLine("Enter the name of the employee to check in the records:");
+        string employeeNameToCheck = Console.ReadLine();
+
+        bool employeeExists = false;    
+
+        foreach(var record in employeeRecords){
+            if(record.Value == employeeNameToCheck){
+                employeeExists = true;
+                break;
+            }
+        }
+        if(employeeExists){
+            Console.WriteLine("Employee exists in the record!");
+        }else{
+            Console.WriteLine("Employee does not exists in the record!");
+        }
+    }
+    }
+}
