@@ -432,16 +432,17 @@ Dictionary*/
 //     }
 // }
 
-namespace Inheritance{
-    internal class Program{
-        public static void Main(string[] args){
-            Cylinder cylinder= new Cylinder();
+// namespace Inheritance{
+//     internal class Program{
+//         public static void Main(string[] args){
+//             Cylinder cylinder= new Cylinder();
 
-            Console.WriteLine("Enter the radius of the Circle:");
-            double radius = Convert.ToDouble(Console.ReadLine());
+//             Console.WriteLine("Enter the radius of the Circle:");
+//             double radius = Convert.ToDouble(Console.ReadLine());
 
         
-            // cylinder.SetRadius(int.Parse(Console.ReadLine()));
-        }
-    }
-}
+//             // cylinder.SetRadius(int.Parse(Console.ReadLine()));
+//         }
+//     }
+// }
+
