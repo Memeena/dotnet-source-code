@@ -5,6 +5,7 @@
 // using System.Linq;
 // using CSharpFundamentals.Math;
 // using LibraryManagement;
+using System.Collections;
 using System.Data;
 using System.Globalization;
 using System.Xml.Serialization;
@@ -203,7 +204,7 @@ using CartDetails;
 // //Converting string to number -> int.Parse or Convert.ToInt32(str)
 // //Converting number to string -> i.ToString()
 //         }
-    
+
 //     namespace Properties{
 //         internal class Program{
 //             static void Main(string[] args) {
@@ -440,9 +441,43 @@ Dictionary*/
 //             Console.WriteLine("Enter the radius of the Circle:");
 //             double radius = Convert.ToDouble(Console.ReadLine());
 
-        
+
 //             // cylinder.SetRadius(int.Parse(Console.ReadLine()));
 //         }
 //     }
 // }
+namespace TestProject
+{
+    public class SimpleCollection : IEnumerable<int>
+    {
+        public static void Main(string[] args) {
 
+            var numbers = new List<int> { 1, 2, 3,4,5 };
+            IEnumerator<int> enumerator = numbers.GetEnumerator();
+            Console.WriteLine(enumerator.MoveNext());
+            while (enumerator.MoveNext())
+            {
+                Console.WriteLine(enumerator.Current);
+            }
+        //         private readonly int[] data = [1, 2, 3];
+        // public IEnumerator<int> GetEnumerator()
+        // {
+        //     for (int i = 0; i < data.Length; i++)
+        //     {
+        //         yield return data[i];
+        //     }
+        // }
+        // IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+        public IEnumerator<int> GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
+    }
+}
