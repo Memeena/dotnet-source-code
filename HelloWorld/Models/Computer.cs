@@ -12,6 +12,7 @@ namespace HelloWorld.Models{
         //     }
         // }
 
+public int ComputerId { get; set; }
         public string MotherBoard { get; set; } = "";
         public int CPUCores{ get; set; }
         public bool HasWifi{ get; set; }
