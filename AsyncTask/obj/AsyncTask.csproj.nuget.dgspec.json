@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DELL\\dotnet-source-code\\HelloWorld\\HelloWorld.csproj": {}
+    "C:\\Users\\DELL\\dotnet-source-code\\AsyncTask\\AsyncTask.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DELL\\dotnet-source-code\\HelloWorld\\HelloWorld.csproj": {
+    "C:\\Users\\DELL\\dotnet-source-code\\AsyncTask\\AsyncTask.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL\\dotnet-source-code\\HelloWorld\\HelloWorld.csproj",
-        "projectName": "HelloWorld",
-        "projectPath": "C:\\Users\\DELL\\dotnet-source-code\\HelloWorld\\HelloWorld.csproj",
+        "projectUniqueName": "C:\\Users\\DELL\\dotnet-source-code\\AsyncTask\\AsyncTask.csproj",
+        "projectName": "AsyncTask",
+        "projectPath": "C:\\Users\\DELL\\dotnet-source-code\\AsyncTask\\AsyncTask.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL\\dotnet-source-code\\HelloWorld\\obj\\",
+        "outputPath": "C:\\Users\\DELL\\dotnet-source-code\\AsyncTask\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -49,36 +49,6 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "dependencies": {
-            "AutoMapper": {
-              "target": "Package",
-              "version": "[13.0.1, )"
-            },
-            "Dapper": {
-              "target": "Package",
-              "version": "[2.1.35, )"
-            },
-            "Microsoft.Extensions.Configuration": {
-              "target": "Package",
-              "version": "[9.0.0, )"
-            },
-            "Microsoft.Extensions.Configuration.Json": {
-              "target": "Package",
-              "version": "[9.0.0, )"
-            },
-            "microsoft.data.sqlclient": {
-              "target": "Package",
-              "version": "[5.2.2, )"
-            },
-            "microsoft.entityframeworkcore": {
-              "target": "Package",
-              "version": "[9.0.0, )"
-            },
-            "microsoft.entityframeworkcore.sqlserver": {
-              "target": "Package",
-              "version": "[9.0.0, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",

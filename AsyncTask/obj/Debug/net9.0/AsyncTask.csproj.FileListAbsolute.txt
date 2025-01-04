@@ -1,0 +1,15 @@
+C:\Users\DELL\dotnet-source-code\AsyncTask\bin\Debug\net9.0\AsyncTask.exe
+C:\Users\DELL\dotnet-source-code\AsyncTask\bin\Debug\net9.0\AsyncTask.deps.json
+C:\Users\DELL\dotnet-source-code\AsyncTask\bin\Debug\net9.0\AsyncTask.runtimeconfig.json
+C:\Users\DELL\dotnet-source-code\AsyncTask\bin\Debug\net9.0\AsyncTask.dll
+C:\Users\DELL\dotnet-source-code\AsyncTask\bin\Debug\net9.0\AsyncTask.pdb
+C:\Users\DELL\dotnet-source-code\AsyncTask\obj\Debug\net9.0\AsyncTask.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DELL\dotnet-source-code\AsyncTask\obj\Debug\net9.0\AsyncTask.AssemblyInfoInputs.cache
+C:\Users\DELL\dotnet-source-code\AsyncTask\obj\Debug\net9.0\AsyncTask.AssemblyInfo.cs
+C:\Users\DELL\dotnet-source-code\AsyncTask\obj\Debug\net9.0\AsyncTask.csproj.CoreCompileInputs.cache
+C:\Users\DELL\dotnet-source-code\AsyncTask\obj\Debug\net9.0\AsyncTask.sourcelink.json
+C:\Users\DELL\dotnet-source-code\AsyncTask\obj\Debug\net9.0\AsyncTask.dll
+C:\Users\DELL\dotnet-source-code\AsyncTask\obj\Debug\net9.0\refint\AsyncTask.dll
+C:\Users\DELL\dotnet-source-code\AsyncTask\obj\Debug\net9.0\AsyncTask.pdb
+C:\Users\DELL\dotnet-source-code\AsyncTask\obj\Debug\net9.0\AsyncTask.genruntimeconfig.cache
+C:\Users\DELL\dotnet-source-code\AsyncTask\obj\Debug\net9.0\ref\AsyncTask.dll

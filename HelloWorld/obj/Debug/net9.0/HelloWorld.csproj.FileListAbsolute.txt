@@ -75,3 +75,4 @@ C:\Users\DELL\dotnet-source-code\HelloWorld\bin\Debug\net9.0\Microsoft.Extension
 C:\Users\DELL\dotnet-source-code\HelloWorld\bin\Debug\net9.0\Microsoft.Extensions.FileProviders.Physical.dll
 C:\Users\DELL\dotnet-source-code\HelloWorld\bin\Debug\net9.0\Microsoft.Extensions.FileSystemGlobbing.dll
 C:\Users\DELL\dotnet-source-code\HelloWorld\bin\Debug\net9.0\appSettings.json
+C:\Users\DELL\dotnet-source-code\HelloWorld\bin\Debug\net9.0\AutoMapper.dll
