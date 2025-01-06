@@ -4,12 +4,28 @@
             Task firstTask = new Task(() =>
             {
                 Thread.Sleep(100);
-                Console.WriteLine("First Task");
+                Console.WriteLine("Task 1");
             });
-            // firstTask.Start();
-            await firstTask;
+            ConsoleAfterDelay("Delay", 350);
+            firstTask.Start();
+            // await firstTask;
+            Task secondTask = ConsoleAfterDelayAsync("Task 2", 250);
+            Task thirdTask = ConsoleAfterDelayAsync("Task 3", 150);
+            await secondTask;
+            await thirdTask;
 
-            Console.WriteLine("After the first task");
+            Console.WriteLine("After the tasks are created");
+        }
+
+        static void ConsoleAfterDelay(string s,int delayTime){
+            Thread.Sleep(delayTime);
+            Console.WriteLine(s);
+
+        }
+
+        static async Task ConsoleAfterDelayAsync(string s,int delayTime){
+            await Task.Delay(delayTime);
+            Console.WriteLine($"{s} ms");
         }
     }
 }

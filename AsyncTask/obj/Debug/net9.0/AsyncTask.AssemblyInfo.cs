@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AsyncTask")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+31bcae437b641c9b571ecf2aeb01673ddc01886c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d46e8d4652fd4c6615569d72fcb0a79891bfdf1c")]
 [assembly: System.Reflection.AssemblyProductAttribute("AsyncTask")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AsyncTask")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
