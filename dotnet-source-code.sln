@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proj1", "Proj1\Proj1.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncTask", "AsyncTask\AsyncTask.csproj", "{798A0CF9-4693-4523-90D7-0C70F8FA8909}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetAPI", "DotnetAPI\DotnetAPI.csproj", "{D8C5FF87-017A-4960-BBE0-4FE80D4C4F39}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{798A0CF9-4693-4523-90D7-0C70F8FA8909}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{798A0CF9-4693-4523-90D7-0C70F8FA8909}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{798A0CF9-4693-4523-90D7-0C70F8FA8909}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8C5FF87-017A-4960-BBE0-4FE80D4C4F39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8C5FF87-017A-4960-BBE0-4FE80D4C4F39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8C5FF87-017A-4960-BBE0-4FE80D4C4F39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8C5FF87-017A-4960-BBE0-4FE80D4C4F39}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
