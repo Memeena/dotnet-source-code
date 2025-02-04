@@ -9,11 +9,13 @@ namespace DotnetAPI.Controllers
     public class UserControllerEF : ControllerBase
     {
         DataContextEF _entityFramework;
+        IUserRepository _userRepository;
         IMapper _mapper;
 
-        public UserControllerEF(IConfiguration config)
+        public UserControllerEF(IConfiguration config, IUserRepository userRepository)
         {
             _entityFramework = new DataContextEF(config);
+            _userRepository = userRepository;
             _mapper = new Mapper(new MapperConfiguration(cfg =>
             {
                 cfg.CreateMap<UserToAddDto, User>();
@@ -46,16 +48,14 @@ namespace DotnetAPI.Controllers
         public IEnumerable<User> GetUsers()
         {
 
-            IEnumerable<User> users = _entityFramework.Users.ToList();
+            IEnumerable<User> users = _userRepository.GetUsers();
             return users;
         }
 
         [HttpGet("GetSingleUser/{userId}")]
         public User GetSingleUser(int userId)
         {
-            User? user = _entityFramework.Users.Where(x => x.UserId == userId).FirstOrDefault<User>();
-            if (user != null) return user;
-            throw new Exception("Failed to get the user!");
+            return _userRepository.GetSingleUser(userId);
         }
 
         [HttpPut("EditUSer")]
@@ -69,7 +69,7 @@ namespace DotnetAPI.Controllers
                 userdb.Email = user.Email;
                 userdb.Gender = user.Gender;
                 userdb.Active = user.Active;
-                if (_entityFramework.SaveChanges() > 0)
+                if (_userRepository.SaveChanges())
                 {
                     return Ok();
                 }
@@ -89,8 +89,8 @@ namespace DotnetAPI.Controllers
             // userdb.Email = user.Email;
             // userdb.Gender = user.Gender;
             // userdb.Active = user.Active;
-            _entityFramework.Add(userdb);
-            if (_entityFramework.SaveChanges() > 0) return Ok();
+            _userRepository.AddEntity<User>(userdb);
+            if (_userRepository.SaveChanges()) return Ok();
             throw new Exception("Failed to insert user!");
 
         }
@@ -103,9 +103,9 @@ namespace DotnetAPI.Controllers
 
             if (userdb != null)
             {
-                _entityFramework.Users.Remove(userdb);
+                _userRepository.RemoveEntity<User>(userdb);
 
-                if (_entityFramework.SaveChanges() > 0)
+                if (_userRepository.SaveChanges())
                 {
                     return Ok();
                 }
