@@ -1,10 +1,12 @@
 using System.Data;
+using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
 using DotnetAPI.Dtos;
 using Microsoft.AspNetCore.Cryptography.KeyDerivation;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
+using Microsoft.IdentityModel.Tokens;
 
 namespace DotnetAPI.Controllers
 {
@@ -61,7 +63,22 @@ namespace DotnetAPI.Controllers
 
                     if (_dapper.ExecuteSqlWithParameters(SqlAddAuth, sqlParameters))
                     {
-                        return Ok();
+                        string sqlAddUser = @$"INSERT INTO TutorialAppSchema.Users(
+                                      [FirstName],
+                                      [LastName],
+                                      [Email],
+                                      [Gender],
+                                      [Active]) VALUES (
+                                    '{userForRegistraion.FirstName}',
+                                    '{userForRegistraion.LastName}',
+                                    '{userForRegistraion.Email}',
+                                    '{userForRegistraion.Gender}',
+                                    1);";
+                        if (_dapper.ExecuteSql(sqlAddUser))
+                        {
+                            return Ok();
+                        }
+                        throw new Exception("Failed to add User!");
                     }
                     throw new Exception("Registration failed!");
                 }
@@ -101,6 +118,27 @@ namespace DotnetAPI.Controllers
                             iterationCount: 1000000,
                             numBytesRequested: 256 / 8
                         );
+        }
+
+        private string CreateToken(int userId)
+        {
+            Claim claims = new Claim[] {
+                new Claim("userId",userId.ToString())
+            };
+
+            string? tokenKeyString = _config.GetSection("AppSettings:TokenKey").Value;
+
+            SymmetricSecurityKey tokenKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(tokenKeyString != null ? tokenKeyString : ""));
+
+            SigningCredentials credentials = new SigningCredentials(tokenKey, SecurityAlgorithms.HmacSha512Signature);
+
+            SecurityTokenDescriptor descriptor = new SecurityTokenDescriptor()
+            {
+                Subject = new ClaimsIdentity(claims),
+                SigningCredentials = credentials,
+                Expires = DateTime.Now.AddDays(1);
+
+            }
         }
     }
 }
